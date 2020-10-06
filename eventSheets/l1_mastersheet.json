@@ -1,0 +1,1815 @@
+{
+	"name": "L1_mastersheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 932147777605270
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "p_fireball",
+					"sid": 607967051980186
+				},
+				{
+					"id": "destroy",
+					"objectClass": "p_firetarget",
+					"sid": 222470955387056
+				},
+				{
+					"id": "destroy",
+					"objectClass": "p_arrow",
+					"sid": 633924050202452
+				},
+				{
+					"id": "destroy",
+					"objectClass": "p_fireemitter",
+					"sid": 404761144785080
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "p_bottomcollision",
+					"sid": 996085691937279,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "p_arin",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-world-gravity",
+					"objectClass": "p_arin",
+					"sid": 244073218551712,
+					"behaviorType": "Physics",
+					"parameters": {
+						"gravity": "30"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "npc_magnisphere",
+					"sid": 376412694921074,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "env_l1_tilemap"
+					}
+				}
+			],
+			"sid": 816481103761374
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "P_movement",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "p_arin",
+									"sid": 214761385657671,
+									"parameters": {
+										"instance-variable": "movementlock"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 503908842725197,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 319128999697982,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 723623923855228,
+											"parameters": {
+												"key": 37
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "p_arin",
+											"sid": 620972698382435,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "\"right\""
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "p_arin",
+											"sid": 207409156715745,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										}
+									],
+									"sid": 584985940594549,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-velocity",
+													"objectClass": "p_arin",
+													"sid": 732406500424543,
+													"behaviorType": "Physics",
+													"parameters": {
+														"which": "x-velocity",
+														"comparison": 2,
+														"value": "p_arin.maxspeed"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "apply-force-at-angle",
+													"objectClass": "p_arin",
+													"sid": 778940967244449,
+													"behaviorType": "Physics",
+													"parameters": {
+														"force": "500",
+														"angle": "0",
+														"image-point": "0"
+													}
+												}
+											],
+											"sid": 202391715335461
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 829599859467611,
+											"parameters": {
+												"key": 39
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 578190523461010,
+											"parameters": {
+												"key": 37
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "p_arin",
+											"sid": 419050431015812,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "\"left\""
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "p_arin",
+											"sid": 722313771766964,
+											"parameters": {
+												"state": "mirrored"
+											}
+										}
+									],
+									"sid": 615906128553911,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-velocity",
+													"objectClass": "p_arin",
+													"sid": 960214346012100,
+													"behaviorType": "Physics",
+													"parameters": {
+														"which": "x-velocity",
+														"comparison": 4,
+														"value": "-p_arin.maxspeed"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "apply-force-at-angle",
+													"objectClass": "p_arin",
+													"sid": 352785798847288,
+													"behaviorType": "Physics",
+													"parameters": {
+														"force": "500",
+														"angle": "180",
+														"image-point": "0"
+													}
+												}
+											],
+											"sid": 837487706240111
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "p_bottomcollision",
+									"sid": 414141351688002,
+									"parameters": {
+										"object": "env_l1_tilemap"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-friction",
+									"objectClass": "p_arin",
+									"sid": 843363538668212,
+									"behaviorType": "Physics",
+									"parameters": {
+										"friction": "0.2"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "p_arin",
+									"sid": 428261995209953,
+									"parameters": {
+										"instance-variable": "jumpready",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 908655550308569
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "p_bottomcollision",
+									"sid": 235298436412452,
+									"parameters": {
+										"object": "env_l1_tilemap"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-friction",
+									"objectClass": "p_arin",
+									"sid": 289545892738144,
+									"behaviorType": "Physics",
+									"parameters": {
+										"friction": "0"
+									}
+								}
+							],
+							"sid": 797230175841006
+						},
+						{
+							"eventType": "comment",
+							"text": "Coyote time"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "p_bottomcollision",
+									"sid": 456904930876928,
+									"parameters": {
+										"object": "env_l1_tilemap"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 486233571601327
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 545999431243994,
+									"parameters": {
+										"seconds": "0.07"
+									}
+								}
+							],
+							"sid": 631206055948919,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "p_bottomcollision",
+											"sid": 680983992041535,
+											"parameters": {
+												"object": "env_l1_tilemap"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "p_arin",
+											"sid": 747796976327933,
+											"parameters": {
+												"instance-variable": "jumpready",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 464375376364380
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 115574534555382,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "p_arin",
+									"sid": 554346648422354,
+									"parameters": {
+										"instance-variable": "movementlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "p_arin",
+									"sid": 923204279773954,
+									"parameters": {
+										"instance-variable": "jumpready"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-impulse-at-angle",
+									"objectClass": "p_arin",
+									"sid": 721236557661396,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse": "p_arin.jumpstrength",
+										"angle": "270",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 788163005509121
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "p_arin",
+									"sid": 594582948086513,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 724821099267157,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 604261676484681
+										}
+									],
+									"actions": [
+										{
+											"id": "unpin",
+											"objectClass": "p_arintail",
+											"sid": 114946123597892,
+											"behaviorType": "Pin"
+										},
+										{
+											"id": "set-position",
+											"objectClass": "p_arintail",
+											"sid": 904765836237015,
+											"parameters": {
+												"x": "p_arin.ImagePointX(3)",
+												"y": "p_arin.ImagePointY(3)"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "p_arintail",
+											"sid": 912918396639231,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "p_arintail",
+											"sid": 299521064401158,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "p_arin",
+												"x": true,
+												"y": true,
+												"angle": true,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										}
+									],
+									"sid": 477704858323227
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "p_arin",
+									"sid": 917148423095125,
+									"parameters": {
+										"instance-variable": "direction",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 390536556872830,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 203143507837380
+										}
+									],
+									"actions": [
+										{
+											"id": "unpin",
+											"objectClass": "p_arintail",
+											"sid": 348681962444625,
+											"behaviorType": "Pin"
+										},
+										{
+											"id": "set-position",
+											"objectClass": "p_arintail",
+											"sid": 896867861495996,
+											"parameters": {
+												"x": "p_arin.ImagePointX(3)",
+												"y": "p_arin.ImagePointY(3)"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "p_arintail",
+											"sid": 256114697924786,
+											"parameters": {
+												"state": "mirrored"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "p_arintail",
+											"sid": 716447852161441,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "p_arin",
+												"x": true,
+												"y": true,
+												"angle": true,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										}
+									],
+									"sid": 796890272802185
+								}
+							]
+						}
+					],
+					"sid": 222674789089207
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "P_camera",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "p_arin",
+									"sid": 932146736290511,
+									"parameters": {
+										"instance-variable": "cameralock"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "p_camerareliefzone",
+									"sid": 588528111683068,
+									"parameters": {
+										"x": "scrollx",
+										"y": "scrolly"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "p_screenglow",
+									"sid": 371301092885786,
+									"parameters": {
+										"x": "scrollx",
+										"y": "scrolly"
+									}
+								},
+								{
+									"id": "scroll-to-position",
+									"objectClass": "System",
+									"sid": 312479488070374,
+									"parameters": {
+										"x": "lerp(scrollx, p_arin.X, 0.3*abs(p_arin.X-scrollx)/220)",
+										"y": "lerp(scrolly, p_arin.Y, 0.1*abs(p_arin.Y-(scrolly-50))/130)"
+									}
+								}
+							],
+							"sid": 165063121047237
+						}
+					],
+					"sid": 670612586423332
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "P_quirk",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "p_arin",
+									"sid": 633303122698030,
+									"parameters": {
+										"instance-variable": "absorb"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 467092337536645,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-click",
+											"objectClass": "Mouse",
+											"sid": 692069484031842,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "p_firetarget",
+											"sid": 934556838021885
+										},
+										{
+											"id": "destroy",
+											"objectClass": "p_fireball",
+											"sid": 923702517987166
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 386782684665662,
+											"parameters": {
+												"object-to-create": "p_firetarget",
+												"layer": "7",
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "p_arin",
+											"sid": 280474403441464,
+											"parameters": {
+												"object": "p_fireball",
+												"layer": "7",
+												"image-point": "0"
+											}
+										},
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "p_fireball",
+											"sid": 948366610065101,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "angle(p_fireball.X, p_fireball.Y, p_firetarget.X, p_firetarget.Y)"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "p_arin",
+											"sid": 566640519414290,
+											"parameters": {
+												"instance-variable": "absorb",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 483360897342334
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 677404554390717
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "p_arin",
+											"sid": 815864690742877,
+											"parameters": {
+												"animation": "\"Fire\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "p_arin",
+											"sid": 137106916751187,
+											"parameters": {
+												"object": "p_headfire",
+												"layer": "7",
+												"image-point": "2"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "p_headfire",
+											"sid": 680060072552110,
+											"behaviorType": "Pin",
+											"parameters": {
+												"pin-to": "p_arin",
+												"x": true,
+												"y": true,
+												"angle": true,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "p_headfire",
+											"sid": 571141331162491,
+											"parameters": {
+												"angle": "180"
+											}
+										}
+									],
+									"sid": 820257796755419
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "p_arin",
+									"sid": 326420948926346,
+									"parameters": {
+										"instance-variable": "absorb"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 501593750958853,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 958853405806008
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "p_arin",
+											"sid": 245715852526844,
+											"parameters": {
+												"animation": "\"Idle\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "p_headfire",
+											"sid": 798504421397707
+										}
+									],
+									"sid": 217866589639824
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 561459638157537,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "p_fireball",
+									"sid": 832435301763057,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "angle(p_fireball.X, p_fireball.Y, Mouse.X, Mouse.Y)"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "p_firetarget",
+									"sid": 592797610366061,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								}
+							],
+							"sid": 310275121433319
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "p_fireball",
+									"sid": 432221608162172,
+									"parameters": {
+										"object": "env_l1_tilemap"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "p_fireball",
+									"sid": 494536841618608,
+									"parameters": {
+										"object": "p_firetarget"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "p_fireball",
+									"sid": 843568521837931,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 697451436176549,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "p_bottomcollision",
+									"sid": 556282183218434,
+									"parameters": {
+										"object": "env_l1_tilemap"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 262155310679784,
+									"parameters": {
+										"first-value": "distance(p_arin.X, p_arin.Y, p_fireball.X, p_fireball.Y)",
+										"comparison": 2,
+										"second-value": "80"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 490523565519649
+								}
+							],
+							"actions": [
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 565982193071195,
+									"parameters": {
+										"time-scale": "0.3"
+									}
+								},
+								{
+									"id": "set-linear-damping",
+									"objectClass": "p_arin",
+									"sid": 674203763820628,
+									"behaviorType": "Physics",
+									"parameters": {
+										"linear-damping": "7"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "p_fireball",
+									"sid": 714312822115049,
+									"parameters": {
+										"object": "p_arrow",
+										"layer": "6",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 976296326809731
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "p_bottomcollision",
+									"sid": 979422654750911,
+									"parameters": {
+										"object": "env_l1_tilemap"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 854392880783497,
+									"parameters": {
+										"first-value": "distance(p_arin.X, p_arin.Y, p_fireball.X, p_fireball.Y)",
+										"comparison": 2,
+										"second-value": "80"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "p_arrow",
+									"sid": 507664944051142,
+									"parameters": {
+										"x": "p_arin.X",
+										"y": "p_arin.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "p_arrow",
+									"sid": 268284420270647,
+									"parameters": {
+										"x": "p_fireball.X",
+										"y": "p_fireball.Y"
+									}
+								}
+							],
+							"sid": 156602170556932
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 603113937226416
+								}
+							],
+							"actions": [
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 150512787798582,
+									"parameters": {
+										"time-scale": "1"
+									}
+								},
+								{
+									"id": "set-linear-damping",
+									"objectClass": "p_arin",
+									"sid": 310357386129882,
+									"behaviorType": "Physics",
+									"parameters": {
+										"linear-damping": "3.5"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "p_arrow",
+									"sid": 586057399323004
+								}
+							],
+							"sid": 247141859566781
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 432419382325999,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "p_bottomcollision",
+									"sid": 344657335160465,
+									"parameters": {
+										"object": "env_l1_tilemap"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 973169857170237,
+									"parameters": {
+										"first-value": "distance(p_arin.X, p_arin.Y, p_fireball.X, p_fireball.Y)",
+										"comparison": 2,
+										"second-value": "80"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-velocity",
+									"objectClass": "p_arin",
+									"sid": 522305047385708,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "0",
+										"y-component": "0"
+									}
+								},
+								{
+									"id": "apply-impulse-at-angle",
+									"objectClass": "p_arin",
+									"sid": 963680433630243,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse": "250",
+										"angle": "angle(p_fireball.X, p_fireball.Y, p_arin.X, p_arin.Y)",
+										"image-point": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "p_fireball",
+									"sid": 240133293305329,
+									"parameters": {
+										"object": "p_fireexplosion",
+										"layer": "12",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "p_fireball",
+									"sid": 755446065379031
+								},
+								{
+									"id": "destroy",
+									"objectClass": "p_firetarget",
+									"sid": 620262451372121
+								},
+								{
+									"id": "destroy",
+									"objectClass": "p_arrow",
+									"sid": 998174935780440
+								},
+								{
+									"id": "set-canvas-size",
+									"objectClass": "System",
+									"sid": 135800646330446,
+									"disabled": true,
+									"parameters": {
+										"width": "504",
+										"height": "296"
+									}
+								}
+							],
+							"sid": 947518639216127
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 484344021541868,
+									"parameters": {
+										"mouse-button": "right",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "p_fireball",
+									"sid": 435678062324994,
+									"parameters": {
+										"object": "p_fireexplosion",
+										"layer": "12",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "p_fireball",
+									"sid": 236385122060265
+								},
+								{
+									"id": "destroy",
+									"objectClass": "p_firetarget",
+									"sid": 299598175805763
+								},
+								{
+									"id": "destroy",
+									"objectClass": "p_arrow",
+									"sid": 585028007907864
+								}
+							],
+							"sid": 474962556431745,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 425624961422412,
+											"parameters": {
+												"first-value": "distance(PhysicsProps.X, PhysicsProps.Y, p_fireball.X, p_fireball.Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-impulse-at-angle",
+											"objectClass": "PhysicsProps",
+											"sid": 985527887947642,
+											"behaviorType": "Physics",
+											"parameters": {
+												"impulse": "100",
+												"angle": "angle(p_fireball.X, p_fireball.Y, PhysicsProps.X, PhysicsProps.Y)",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 947604447894579
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 685378445638814,
+											"parameters": {
+												"first-value": "distance(npc_magnisphere.X, npc_magnisphere.Y, p_fireball.X, p_fireball.Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-impulse-at-angle",
+											"objectClass": "npc_magnisphere",
+											"sid": 757017953456313,
+											"behaviorType": "Physics",
+											"parameters": {
+												"impulse": "100",
+												"angle": "angle(p_fireball.X, p_fireball.Y, npc_magnisphere.X, npc_magnisphere.Y)",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 425281276866486
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "p_fireball",
+									"sid": 992885890995113
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "p_fireball",
+									"sid": 193200577172814,
+									"parameters": {
+										"object": "p_fireemitter",
+										"layer": "12",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "p_fireemitter",
+									"sid": 590211010828954,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "p_fireemitter",
+									"sid": 748540435180568,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "p_fireball",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 481127887941468
+						}
+					],
+					"sid": 540331186724342
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 864059724779024,
+							"parameters": {
+								"key": 70
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "p_arin",
+							"sid": 584501620359661,
+							"parameters": {
+								"instance-variable": "absorb",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 887738392525217
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "p_arin",
+							"sid": 232627095244583,
+							"parameters": {
+								"object": "boost_replenish"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "p_arin",
+							"sid": 653455127792700,
+							"parameters": {
+								"instance-variable": "absorb",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 483804333549705
+				}
+			],
+			"sid": 165451244723888
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemies",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Magnisphere",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "npc_magnisphere",
+									"sid": 398459054862515,
+									"parameters": {
+										"instance-variable": "spot"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 851953291521315,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-angular-velocity",
+											"objectClass": "npc_magnisphere",
+											"sid": 905034742051160,
+											"behaviorType": "Physics",
+											"parameters": {
+												"comparison": 4,
+												"value": "-5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "npc_magnisphere",
+											"sid": 451076272511408,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 804642913483084
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-angular-velocity",
+											"objectClass": "npc_magnisphere",
+											"sid": 159704657190890,
+											"behaviorType": "Physics",
+											"parameters": {
+												"comparison": 2,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "npc_magnisphere",
+											"sid": 845018917684184,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 449129060886439
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "npc_magnisphere",
+											"sid": 465335170473348,
+											"parameters": {
+												"instance-variable": "direction",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-torque",
+											"objectClass": "npc_magnisphere",
+											"sid": 202460237822783,
+											"behaviorType": "Physics",
+											"parameters": {
+												"torque": "-600"
+											}
+										}
+									],
+									"sid": 165799022570454
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "npc_magnisphere",
+											"sid": 853076154435044,
+											"parameters": {
+												"instance-variable": "direction",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-torque",
+											"objectClass": "npc_magnisphere",
+											"sid": 293626851476457,
+											"behaviorType": "Physics",
+											"parameters": {
+												"torque": "600"
+											}
+										}
+									],
+									"sid": 264149012345519
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "npc_magnisphere",
+									"sid": 333598352998381,
+									"parameters": {
+										"instance-variable": "spot"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 778660814029520,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "p_arin",
+											"sid": 522167655252922,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "npc_magnisphere.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "npc_magnisphere",
+											"sid": 147078691248875,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 248493146432196
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "p_arin",
+											"sid": 971571518633340,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "npc_magnisphere.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "npc_magnisphere",
+											"sid": 402254341056624,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 489561790823686
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "npc_magnisphere",
+											"sid": 288098955923288,
+											"parameters": {
+												"instance-variable": "direction",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-torque",
+											"objectClass": "npc_magnisphere",
+											"sid": 276660475034727,
+											"behaviorType": "Physics",
+											"parameters": {
+												"torque": "-800"
+											}
+										}
+									],
+									"sid": 756321750080042
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "npc_magnisphere",
+											"sid": 957551308136093,
+											"parameters": {
+												"instance-variable": "direction",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-torque",
+											"objectClass": "npc_magnisphere",
+											"sid": 118668033427836,
+											"behaviorType": "Physics",
+											"parameters": {
+												"torque": "800"
+											}
+										}
+									],
+									"sid": 732815343587900
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "npc_magnisphere",
+									"sid": 352537016258394,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "p_arin",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "npc_magnisphere",
+									"sid": 710471231846349,
+									"parameters": {
+										"instance-variable": "spot",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 498358526585316
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "npc_magnisphere",
+									"sid": 486162362975950,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "p_arin",
+										"image-point": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "npc_magnisphere",
+									"sid": 811069215456214,
+									"parameters": {
+										"instance-variable": "spot",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 529953432754637
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "npc_magnisphere",
+									"sid": 516077694809046,
+									"parameters": {
+										"object": "p_arin"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "npc_magnisphere",
+									"sid": 527930569519037,
+									"parameters": {
+										"object": "fx_flash",
+										"layer": "12",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "set-blend-mode",
+									"objectClass": "fx_flash",
+									"sid": 509218403022473,
+									"parameters": {
+										"blend-mode": "additive"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "fx_flash",
+									"sid": 326111360685226,
+									"parameters": {
+										"effect": "\"Tint\"",
+										"parameter-index": "0",
+										"value": "rgbEx(255, 220, 0)"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "fx_flash",
+									"sid": 125766997820726,
+									"parameters": {
+										"opacity": "15"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "npc_magnisphere",
+									"sid": 159782313631502,
+									"parameters": {
+										"object": "fx_flash",
+										"layer": "13",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 882898895156647,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "p_arin",
+											"sid": 763569021601139,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "npc_magnisphere.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-impulse-at-angle",
+											"objectClass": "npc_magnisphere",
+											"sid": 633026293989695,
+											"behaviorType": "Physics",
+											"parameters": {
+												"impulse": "70",
+												"angle": "230",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 735912090758325
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "p_arin",
+											"sid": 781577597320451,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "npc_magnisphere.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-impulse-at-angle",
+											"objectClass": "npc_magnisphere",
+											"sid": 486542098511625,
+											"behaviorType": "Physics",
+											"parameters": {
+												"impulse": "70",
+												"angle": "310",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 919061541805670
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "fx_flash",
+									"sid": 705613917866129
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 494125558752404,
+									"parameters": {
+										"seconds": "0.05"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "fx_flash",
+									"sid": 536702237491390
+								}
+							],
+							"sid": 837670255843955
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "npc_magnisphere",
+									"sid": 237103398558403
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "npc_magnisphere",
+									"sid": 492744550768160,
+									"parameters": {
+										"object": "fx_purpleeyesmall",
+										"layer": "13",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "fx_purpleeyesmall",
+									"sid": 182947278244249,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "npc_magnisphere",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 257628137181603
+						}
+					],
+					"sid": 293655891207279
+				}
+			],
+			"sid": 820035715278220
+		}
+	],
+	"sid": 713520914646985
+}

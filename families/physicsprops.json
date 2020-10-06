@@ -1,0 +1,17 @@
+{
+	"name": "PhysicsProps",
+	"plugin-id": "Sprite",
+	"sid": 120266962366121,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 413269232744938
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"physobject"
+	]
+}

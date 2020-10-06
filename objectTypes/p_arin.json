@@ -1,0 +1,184 @@
+{
+	"name": "p_arin",
+	"plugin-id": "Sprite",
+	"sid": 222268399761452,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direction",
+			"type": "string",
+			"desc": "",
+			"sid": 788346485817322
+		},
+		{
+			"name": "moving",
+			"type": "boolean",
+			"desc": "",
+			"sid": 718014405925250
+		},
+		{
+			"name": "cameralock",
+			"type": "boolean",
+			"desc": "",
+			"sid": 679592973487071
+		},
+		{
+			"name": "cameratype",
+			"type": "string",
+			"desc": "",
+			"sid": 370054152127649
+		},
+		{
+			"name": "absorb",
+			"type": "boolean",
+			"desc": "",
+			"sid": 586110712079723
+		},
+		{
+			"name": "maxspeed",
+			"type": "number",
+			"desc": "",
+			"sid": 905954720243546
+		},
+		{
+			"name": "movementlock",
+			"type": "boolean",
+			"desc": "",
+			"sid": 911919534417814
+		},
+		{
+			"name": "jumpstrength",
+			"type": "number",
+			"desc": "",
+			"sid": 847143928229302
+		},
+		{
+			"name": "jumpready",
+			"type": "boolean",
+			"desc": "",
+			"sid": 211050681560623
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 254165732649973
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 174157437780456
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5611361,
+						"collisionPoly": {
+							"points": [
+								0.375,
+								0.3125,
+								0.59375,
+								0.3125,
+								0.5937499999999991,
+								1,
+								0.375,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.5,
+								"y": 0.3125
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.40625,
+								"y": 0.71875
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 391110923776557,
+				"name": "Idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5890391,
+						"collisionPoly": {
+							"points": [
+								0.375,
+								0.3125,
+								0.59375,
+								0.3125,
+								0.5937499999999991,
+								1,
+								0.375,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.5,
+								"y": 0.3125
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.40625,
+								"y": 0.71875
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 447448106416465,
+				"name": "Fire",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

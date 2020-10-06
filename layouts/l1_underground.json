@@ -1,0 +1,1198 @@
+{
+	"name": "L1_Underground",
+	"layers": [
+		{
+			"name": "Back-parallax",
+			"overriden": 0,
+			"instances": [],
+			"sid": 109331429822504,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0,
+				0,
+				0,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Mid-parallax",
+			"overriden": 0,
+			"instances": [],
+			"sid": 388591642580008,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Front-parallax",
+			"overriden": 0,
+			"instances": [],
+			"sid": 118829415226450,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Wall-tilemap",
+			"overriden": 0,
+			"instances": [],
+			"sid": 778718442913747,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Wall-decor",
+			"overriden": 0,
+			"instances": [],
+			"sid": 355096079437917,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Props",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "physobject",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": false,
+								"collision-mask": "circle",
+								"prevent-rotation": false,
+								"density": 40,
+								"friction": 0.5,
+								"elasticity": 0.2,
+								"linear-damping": 0,
+								"angular-damping": 0.7,
+								"bullet": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 437,
+						"y": 502,
+						"width": 15,
+						"height": 15,
+						"originX": 0.5333333333333333,
+						"originY": 0.5333333333333333,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 652859816516176,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Characters",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "p_arintail",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 99,
+						"y": 102,
+						"width": 64,
+						"height": 64,
+						"originX": 0.6875,
+						"originY": 0.59375,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "p_arin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 2,
+					"instanceVariables": {
+						"direction": "right",
+						"moving": false,
+						"cameralock": false,
+						"cameratype": "",
+						"absorb": true,
+						"maxspeed": 180,
+						"movementlock": false,
+						"jumpstrength": 180,
+						"jumpready": false
+					},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": false,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": true,
+								"density": 54,
+								"friction": 0.2,
+								"elasticity": 0,
+								"linear-damping": 1,
+								"angular-damping": 1,
+								"bullet": true,
+								"enabled": true
+							}
+						},
+						"Persist": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 105,
+						"y": 90,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "p_camerareliefzone",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 310,
+						"y": 179,
+						"width": 97,
+						"height": 81,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "p_arrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 15,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 166,
+						"y": -39,
+						"width": 32,
+						"height": 32,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "p_bottomcollision",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 105,
+						"y": 123,
+						"width": 10,
+						"height": 7,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "npc_magnisphere",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "On",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 4,
+					"instanceVariables": {
+						"spot": false,
+						"hitwall": false,
+						"direction": 1
+					},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": false,
+								"collision-mask": "circle",
+								"prevent-rotation": false,
+								"density": 24,
+								"friction": 0.5,
+								"elasticity": 0.5,
+								"linear-damping": 0.6,
+								"angular-damping": 0.2,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "custom",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 1061,
+						"y": 477,
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "npc_boltruck",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 20,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": false,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": true,
+								"density": 40,
+								"friction": 0.5,
+								"elasticity": 0,
+								"linear-damping": 0,
+								"angular-damping": 0,
+								"bullet": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 2106,
+						"y": 541,
+						"width": 128,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 879143051763436,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Character-overlay",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "p_firetarget",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 136,
+						"y": -35,
+						"width": 1,
+						"height": 1,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "p_fireball",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 600,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 161,
+						"y": 20,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 903904870074875,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Real-FX",
+			"overriden": 0,
+			"instances": [],
+			"sid": 312428942023086,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Front-tilemap",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "env_l1_tilemap",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 3,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Physics": {
+							"properties": {
+								"immovable": true,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.2,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						}
+					},
+					"ownData": {
+						"tilemapData": {
+							"width": 125,
+							"height": 50,
+							"max-width": 213,
+							"max-height": 95,
+							"data": "5x0,1,7,31,4x0,1,7,13,19,25,2x7,13,31,5x0,1,7,13,19,25,2x7,13,19,31,64x0,2,8,32,4x0,2,8,14,20,26,2x8,14,32,5x0,2,8,14,20,26,2x8,14,20,32,64x0,3,9,33,4x0,3,9,15,21,27,2x9,15,33,5x0,3,9,15,21,27,2x9,15,21,33,64x0,4,10,34,4x0,4,10,16,22,28,2x10,16,34,5x0,4,10,16,22,28,2x10,16,22,34,64x0,5,11,35,4x0,5,11,17,23,29,2x11,17,35,5x0,5,11,17,23,29,2x11,17,23,35,64x0,2,8,32,4x0,2,8,14,20,26,2x8,14,32,5x0,2,8,14,20,26,2x8,14,20,32,64x0,2,8,32,4x0,2,8,14,20,26,2x8,14,32,5x0,2,8,14,20,26,2x8,14,20,32,64x0,3,9,33,4x0,3,9,15,21,27,2x9,15,33,5x0,3,9,15,21,27,2x9,15,21,33,64x0,4,10,34,4x0,6,12,18,24,30,2x12,18,36,5x0,4,10,16,22,28,2x10,16,22,34,64x0,5,11,35,7x0,1,7,13,19,25,31,5x0,5,11,17,23,29,2x11,17,23,35,64x0,2,8,32,7x0,2,8,14,20,26,32,5x0,2,8,14,20,26,2x8,14,20,32,64x0,2,8,32,7x0,6,12,18,24,30,36,5x0,2,8,14,20,26,2x8,14,20,32,64x0,3,9,33,9x0,1,7,13,31,5x0,6,12,18,24,30,2x12,18,24,36,64x0,4,10,34,9x0,2,8,14,32,7x0,1,7,13,19,25,2x7,31,64x0,5,11,35,9x0,6,12,18,36,7x0,2,8,14,20,26,2x8,32,64x0,2,8,32,10x0,1,7,31,7x0,3,9,15,21,27,2x9,33,64x0,6,12,36,10x0,2,8,32,7x0,4,10,16,22,28,2x10,34,77x0,3,9,33,7x0,6,12,18,24,30,2x12,36,77x0,4,10,34,5x0,1,7,13,19,25,2x7,13,19,31,77x0,5,11,35,5x0,2,8,14,20,26,2x8,14,20,32,77x0,2,8,32,5x0,3,9,15,21,27,2x9,15,21,33,64x0,1,7,31,10x0,2,8,32,5x0,4,10,16,22,28,2x10,16,22,34,64x0,2,8,32,10x0,3,9,33,5x0,6,12,18,24,30,2x12,18,24,36,64x0,3,9,33,10x0,4,10,34,8x0,1,7,13,19,25,7,31,64x0,4,10,34,10x0,5,11,35,8x0,2,8,14,20,26,8,32,64x0,5,11,35,10x0,2,8,32,8x0,3,9,15,21,27,9,33,64x0,2,8,32,10x0,6,12,36,8x0,4,10,16,22,28,10,34,64x0,6,12,36,4x0,1,31,2x0,1,7,13,19,31,4x0,1,31,2x0,5,11,17,23,29,11,35,71x0,2,32,2x0,2,8,14,20,32,4x0,2,32,2x0,2,8,14,20,26,8,32,71x0,6,36,2x0,3,9,15,21,33,4x0,3,33,2x0,2,8,14,20,26,8,32,75x0,6,12,18,24,36,4x0,4,34,2x0,3,9,15,21,27,9,33,77x0,1,7,31,4x0,5,35,2x0,4,10,16,22,28,10,34,77x0,2,8,32,4x0,6,36,2x0,5,11,17,23,29,11,35,77x0,3,9,33,8x0,2,8,14,20,26,8,32,74x0,1,31,0,4,10,34,8x0,6,12,18,24,30,12,36,74x0,6,36,0,5,11,35,6x0,1,7,13,19,25,2x7,13,31,77x0,2,8,32,6x0,2,8,14,20,26,2x8,14,32,77x0,2,8,32,6x0,3,9,15,21,27,2x9,15,33,77x0,3,9,33,6x0,6,12,18,24,30,2x12,18,36,77x0,4,10,34,8x0,1,7,13,19,25,7,31,77x0,6,12,36,8x0,6,12,18,24,30,12,36,71x0,1,31,2x0,1,7,13,19,31,9x0,1,7,13,19,25,31,71x0,2,32,2x0,2,8,14,20,32,9x0,2,8,14,20,26,32,71x0,3,33,2x0,3,9,15,21,33,9x0,3,9,15,21,27,33,71x0,6,36,2x0,6,12,18,24,36,9x0,4,10,16,22,28,34,77x0,1,7,31,9x0,6,12,18,24,30,36,77x0,2,8,32,8x0,1,7,13,19,25,7,31,77x0,3,9,33,8x0,2,8,14,20,26,8,32,77x0,4,10,34,8x0,3,9,15,21,27,9,33,77x0,5,11,35,8x0,6,12,18,24,30,12,36,77x0,2,8,32,9x0,1,7,13,19,25,31,77x0,2,8,32,9x0,2,8,14,20,26,32,77x0,3,9,33,9x0,3,9,15,21,27,33,77x0,4,10,34,9x0,4,10,16,22,28,34,77x0,5,11,35,9x0,5,11,17,23,29,35,77x0,2,8,32,9x0,2,8,14,20,26,32,77x0,2,8,32,9x0,2,8,14,20,26,32,77x0,6,12,36,9x0,6,12,18,24,30,36,75x0,1,7,13,19,31,8x0,1,7,13,19,25,7,31,75x0,2,8,14,20,32,8x0,2,8,14,20,26,8,32,75x0,3,9,15,21,33,8x0,3,9,15,21,27,9,33,75x0,6,12,18,24,36,8x0,4,10,16,22,28,10,34,77x0,1,7,31,8x0,5,11,17,23,29,11,35,77x0,2,8,32,8x0,2,8,14,20,26,8,32,77x0,3,9,33,8x0,2,8,14,20,26,8,32,77x0,4,10,34,8x0,3,9,15,21,27,9,33,77x0,5,11,35,8x0,6,12,18,24,30,12,36,77x0,2,8,32,6x0,1,7,13,19,25,2x7,13,31,77x0,2,8,32,6x0,2,8,14,20,26,2x8,14,32,77x0,3,9,33,6x0,3,9,15,21,27,2x9,15,33,77x0,4,10,34,6x0,4,10,16,22,28,2x10,16,34,77x0,5,11,35,6x0,5,11,17,23,29,2x11,17,35,77x0,2,8,32,6x0,2,8,14,20,26,2x8,14,32,77x0,2,8,32,6x0,2,8,14,20,26,2x8,14,32,77x0,3,9,33,6x0,6,12,18,24,30,2x12,18,36,77x0,4,10,34,5x0,1,7,13,19,25,2x7,13,19,31,77x0,6,12,36,5x0,2,8,14,20,26,2x8,14,20,32,75x0,1,7,13,19,31,5x0,3,9,15,21,27,2x9,15,21,33,75x0,2,8,14,20,32,5x0,4,10,16,22,28,2x10,16,22,34,75x0,3,9,15,21,33,5x0,5,11,17,23,29,2x11,17,23,35,75x0,6,12,18,24,36,5x0,2,8,14,20,26,2x8,14,20,32,77x0,1,7,31,5x0,2,8,14,20,26,2x8,14,20,32,77x0,2,8,32,5x0,3,9,15,21,27,2x9,15,21,33,77x0,6,12,36,5x0,6,12,18,24,30,2x12,18,24,36,83x0,1,7,13,19,25,2x7,13,19,25,7,31,83x0,6,12,18,24,30,2x12,18,24,30,12,36,81x0,1,7,13,19,25,2x7,13,19,25,2x7,13,31,81x0,6,12,18,24,30,2x12,18,24,30,2x12,18,36,79x0,1,7,13,19,25,2x7,13,19,25,2x7,13,19,25,31,79x0,2,8,14,20,26,2x8,14,20,26,2x8,14,20,26,32,79x0,3,9,15,21,27,2x9,15,21,27,2x9,15,21,27,33,79x0,6,12,18,24,30,2x12,18,24,30,2x12,18,24,30,36,75x0,1,7,13,19,25,2x7,13,19,25,2x7,13,19,25,2x7,13,19,31,75x0,2,8,14,20,26,2x8,14,20,26,2x8,14,20,26,2x8,14,20,32,75x0,3,9,15,21,27,2x9,15,21,27,2x9,15,21,27,2x9,15,21,33,75x0,4,10,16,22,28,2x10,16,22,28,2x10,16,22,28,2x10,16,22,34,75x0,5,11,17,23,29,2x11,17,23,29,2x11,17,23,29,2x11,17,23,35,75x0,2,8,14,20,26,2x8,14,20,26,2x8,14,20,26,2x8,14,20,32,75x0,2,8,14,20,26,2x8,14,20,26,2x8,14,20,26,2x8,14,20,32,75x0,6,12,18,24,30,2x12,18,24,30,2x12,18,24,30,2x12,18,24,36,10794x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 4002,
+						"height": 1605,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 390776195978630,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Front-decor",
+			"overriden": 0,
+			"instances": [],
+			"sid": 832017137997272,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Overlay-parallax",
+			"overriden": 0,
+			"instances": [],
+			"sid": 960349587726074,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Overlay-FX",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "p_fireemitter",
+					"properties": {
+						"rate": 180,
+						"spray-cone": 30,
+						"type": "continuous-spray",
+						"object": -1,
+						"live-preview": false,
+						"speed": 25,
+						"size": 2,
+						"opacity": 75,
+						"grow-rate": -2,
+						"x-randomiser": 14,
+						"y-randomiser": 14,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 4,
+						"grow-rate-randomiser": -1,
+						"acceleration": 0,
+						"gravity": 0,
+						"angle-randomiser": 15,
+						"life-speed-randomiser": 400,
+						"opacity-randomiser": 20,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
+					},
+					"uid": 17,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": 161,
+						"y": 21,
+						"width": 45,
+						"height": 45,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				}
+			],
+			"sid": 624041685260343,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Lighting",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "p_screenglow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 321,
+						"y": 178,
+						"width": 699,
+						"height": 413,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.6999999999999997
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "p_fireexplosion",
+					"properties": {
+						"rate": 120,
+						"spray-cone": 360,
+						"type": "one-shot",
+						"object": -1,
+						"live-preview": false,
+						"speed": 50,
+						"size": 4,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 16,
+						"y-randomiser": 16,
+						"initial-speed-randomiser": 160,
+						"size-randomiser": 8,
+						"grow-rate-randomiser": 40,
+						"acceleration": 0,
+						"gravity": 0,
+						"angle-randomiser": 20,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 0.3
+					},
+					"uid": 16,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Brightness": {
+							"parameters": {
+								"brightness": 1.3899999999999961
+							}
+						}
+					},
+					"world": {
+						"x": 166,
+						"y": 13,
+						"width": 20,
+						"height": 20,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				},
+				{
+					"type": "fx_flash",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0.1,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"parameters": {
+								"brightness": 0.7999999999999965
+							}
+						},
+						"Tint": {
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"world": {
+						"x": 29,
+						"y": -136,
+						"width": 248,
+						"height": 248,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				},
+				{
+					"type": "fx_purpleeyesmall",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 25,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 962,
+						"y": -56,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				}
+			],
+			"sid": 286555588853948,
+			"effectTypes": [
+				{
+					"effectId": "multiply",
+					"name": "Multiply",
+					"instance": {
+						"parameters": {}
+					}
+				}
+			],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.0392156862745098,
+				0.050980392156862744,
+				0.10196078431372549,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "UI-bottom",
+			"overriden": 0,
+			"instances": [],
+			"sid": 178268067038450,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "UI-top",
+			"overriden": 0,
+			"instances": [],
+			"sid": 334807175331736,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Menu",
+			"overriden": 0,
+			"instances": [],
+			"sid": 324174521952666,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		}
+	],
+	"sid": 165829234539989,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 4000,
+	"height": 1600,
+	"unboundedScrolling": false,
+	"eventSheet": "L1_mastersheet"
+}
